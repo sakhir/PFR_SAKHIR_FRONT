@@ -1,0 +1,139 @@
+
+<div class="row  m-l-10 ">
+    <section class="content-header">
+        <h1 >
+         Profils
+         
+        </h1>
+
+      </section>
+<div class="col-md-10 m-t-15 m-l-50">
+<!-- TABLE: LATEST ORDERS -->
+<div class="box box-info ">
+
+
+    <div class="box-header with-border  ">
+      <h3 class="box-title">Liste des Profils</h3>
+
+    </div>
+    <!-- /.box-header -->
+
+ 
+    <div class="box-body ">
+
+      <div class="row " >
+
+        <!-- div du tableau des profils  -->
+  <div class="col-md-9" id="trait">
+      <div class="table-responsive">
+        <table class="table no-margin">
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>Libelle</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let p of profils">
+            <td>{{p.id}}</td>
+            <td>{{p.libelle}}</td>
+            <td> <button class="btn btn-sm  btn-info m-l-2" (click)="usersProfil(p.id)"> Details</button>
+              <button [routerLink]="['/profil-edit/',p.id ]"  class="btn btn-sm  btn-success m-l-10 "> Editer</button>
+              <button  (click)="SupprimerProfil(p.id)"  class="btn btn-sm  btn-danger m-l-10 "> Supprimer</button>
+            </td>
+          
+          </tr>
+          
+          </tbody>
+        </table>
+
+    <div class="box-footer clearfix">
+      <a href="javascript:void(0)" *ngIf="prec" (click)="previous()"  class="btn btn-sm btn-default btn-flat pull-left">Precedent</a>
+      <a href="javascript:void(0)" *ngIf="suiv" (click)="next()" class="btn btn-sm btn-info btn-flat pull-right">Suivant</a>
+    </div>
+   
+      </div> 
+    
+
+
+
+
+       
+    </div>
+    <!-- /fin div col  le tableau des profils -->
+
+
+    <div class="col-md-3">
+      <!-- .box   creation de profil -->
+      <div class="  ">
+
+
+  
+        <div class="box-header with-border">
+        </div>
+        <h3 class="box-title">Ajouter un profil   </h3>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" [formGroup]="profilForm">
+          <div class="box-body">
+            <div class="form-group">
+              <label for="inputLibelle" class="col-sm-5 control-label">Libelle </label>
+      
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputLibelle" placeholder="Libelle du profil "
+                [(ngModel)]="p.libelle" formControlName="libelle"
+                [ngClass]="{ 'is-invalid': submitted && f.libelle.errors }"
+                >
+              </div>
+            </div>
+           
+          
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            
+            <button (click)="addProfil()"  class="btn btn-info pull-right">Ajouter</button>
+            <div *ngIf="submitted && f.libelle.errors" class="invalid-feedback">
+              <div  class="text-danger" *ngIf="f.libelle.errors.required">le libelle est obligatoire</div>
+            </div>
+          </div>
+          <!-- /.box-footer -->
+        </form>
+      </div>
+        <!-- /.box  fin creation de profil  -->
+
+    </div>
+    <div class="col-md-5">
+          <div class="box box-body col mt-4 " *ngIf="view">
+      <div>
+          <div class="">
+            <table class="table table table-striped table-bordered table-hover">
+              <thead>
+                
+                <th>Id</th>
+                <th>email</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of pr.users">
+                  <td>{{user.id }}</td>
+                  <td>{{user.email }}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        </div>
+      </div> 
+    </div>
+    </div>
+    </div>
+    <!-- /.box-body -->
+
+  </div>
+  <!-- /.box -->
+</div>  
+
+
+ 
+
+</div>

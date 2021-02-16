@@ -1,0 +1,68 @@
+<div class="col-md-10  m-l-150 m-t-100">
+    <div class="m-t-15">
+    
+
+<div class="col-md-10">
+    <!-- Widget: user widget style 1 -->
+    <div class="box box-widget widget-user">
+      <!-- Add the bg color to the header using any of the bg-* classes -->
+      <div class="widget-user-header bg-aqua-active">
+        <h3 class="widget-user-username"> Détails de l'utilisateur </h3>
+        <h5 class="widget-user-desc"></h5>
+    
+      </div>
+      <div class="widget-user-image">
+        <!-- <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Avatar"> -->
+        <span *ngIf="user.avatar && user.avatar!='aW1n'"> 
+                <img src="{{'data:image/jpg;base64,'+user.avatar}}" class="img-circle" alt="User Avatar" style="width: 150px;height:100px; ">
+              </span>
+              <span *ngIf="user.avatar=='aW1n' || !user.avatar"> 
+                <img src="assets/avat.png" class="img-circle" alt="User Avatar" style="width: 150px;height:150px; ">  
+              </span>
+      </div>
+      <div class="box-footer">
+        <div class="row m-t-50">
+          <div class="col-sm-4 border-right">
+            <div class="description-block">
+              <h5 class="description-header">Prenom</h5>
+              <span class="description-text">{{user.prenom }} </span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-4 border-right">
+            <div class="description-block">
+              <h5 class="description-header">Nom</h5>
+              <span class="description-text">{{user.nom}}</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-4">
+            <div class="description-block">
+              <h5 class="description-header">Email</h5>
+              <span class="description-text">{{user.email}}</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <!-- /.col -->
+          <div class="col-sm-4">
+            <div class="description-block">
+              <h5 class="description-header">Profil</h5>
+              <span class="description-text">{{user.profil.libelle }}</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <button routerLink="/home"  class="btn btn-sm  btn-danger pull-right ">Retour</button>
+      </div>
+    </div>
+    <!-- /.widget-user -->
+  </div>
+  
+
+    </div>
+    </div>

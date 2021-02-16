@@ -1,0 +1,15 @@
+<app-auth *ngIf="!isLogin()"> </app-auth>
+<div *ngIf="isLogin()">
+    <app-appheader ></app-appheader>
+
+<app-appmenu>  </app-appmenu> 
+ <!-- Content Wrapper. Contains page content -->
+ <div class="content-wrapper">
+<router-outlet></router-outlet>
+
+</div>
+<!-- /Content Wrapper. -->
+
+<app-appfooter></app-appfooter>
+<!-- <app-appsetting></app-appsetting> -->
+</div>

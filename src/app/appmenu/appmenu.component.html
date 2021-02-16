@@ -1,0 +1,134 @@
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+
+         <span *ngIf="user.avatar"> 
+                <img src="{{'data:image/jpg;base64,'+user.avatar}}" class="img-circle" alt="User Image" style="width: 50px;height:40px; "  >
+              </span>
+              <span *ngIf="!user.avatar"> 
+                <img src="assets/avat.png" class="img-circle" alt="User Image" style="width: 50px;height:40px; ">  
+              </span>
+        </div>
+        <div class="pull-left info">
+          <p>{{user.prenom }}  {{user.nom}}</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+            <span class="input-group-btn">
+              
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MENU</li>
+        <li class="active treeview menu-open">
+          <a href="#"  
+          >
+            <i class="fa fa-dashboard"></i> <span>Gestion Profils</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li  class="active">
+              <a  href="javascript:void(0)" ngxScrollTo
+              [ngxScrollToOffset]="550"  ><i class="fa fa-circle-o"></i> Liste Profils</a></li>
+            <li ><a href=""><i class="fa fa-circle-o"></i> Ajout Profil</a></li>
+          </ul>
+        </li>
+       
+        <li class="treeview menu-open">
+          <a href="#"  
+          >
+            <i class="fa fa-dashboard"></i> <span>Gestion des utilisateurs</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a  href="javascript:void(0)" ngxScrollTo
+              [ngxScrollToOffset]="950"><i class="fa fa-circle-o"></i> Liste users</a></li>
+            <li ><a href="#"><i class="fa fa-circle-o"></i> Ajout Utilisateur</a></li>
+          </ul>
+        </li>
+        <li class="treeview menu-open">
+          <a href="#"  
+          >
+            <i class="fa fa-dashboard"></i> <span>Profil de sortie </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="javascript:void(0)" ngxScrollTo
+              [ngxScrollToOffset]="1600"><i class="fa fa-circle-o"></i> Liste Profils de Sortie</a></li>
+            <li ><a href="#"><i class="fa fa-circle-o"></i> Ajout Profil de Sortie </a></li>
+          </ul>
+        </li> 
+        <li class="treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Groupe de Competences</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="javascript:void(0)" ngxScrollTo
+              [ngxScrollToOffset]="2050"><i class="fa fa-circle-o"></i> Liste Groupe Compétences</a></li>
+            <li ><a href="#"><i class="fa fa-circle-o"></i> Ajout Groupe </a></li>
+          </ul>
+        </li>
+        <li class="treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Gestion Réferentiels</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a  href="javascript:void(0)"
+              ngxScrollTo
+              [ngxScrollToOffset]="2960"><i class="fa fa-circle-o"></i> Liste Référentiels</a></li>
+            <li ><a href="#"><i class="fa fa-circle-o"></i> Ajout Référentiel</a></li>
+          </ul>
+        </li>
+        <li class="treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Gestion Promos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="javascript:void(0)"
+              ngxScrollTo
+              [ngxScrollToOffset]="4000"><i class="fa fa-circle-o"></i> Ajout d'une Promo</a></li>
+           
+          </ul>
+        </li>
+        <li class="treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Gestion compétences</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="javascript:void(0)"
+              ngxScrollTo
+              [ngxScrollToOffset]="6000"><i class="fa fa-circle-o"></i> Liste Compétences</a></li>
+            <li ><a href="#"><i class="fa fa-circle-o"></i> Ajout Compétence</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>

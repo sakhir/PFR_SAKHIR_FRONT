@@ -1,0 +1,66 @@
+<div class="col-md-10  m-l-150 m-t-100">
+    <div class="m-t-15">
+    
+
+<div class="col-md-10">
+    <!-- Widget: user widget style 1 -->
+    <div class="box box-widget widget-user">
+      <!-- Add the bg color to the header using any of the bg-* classes -->
+      <div class="widget-user-header bg-aqua-active">
+        <h3 class="widget-user-username"> Modifier le  profil {{profils.libelle}}  </h3>
+        <h5 class="widget-user-desc"></h5>
+    
+      </div>
+      
+      <div class="box-footer">
+        <div class="row m-t-50">
+          <!-- .box   creation de profil -->
+      <div class="  ">
+
+
+  
+        <div class="box-header with-border">
+        </div>
+
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" [formGroup]="profilForm">
+          <div class="box-body">
+            <div class="form-group">
+              <label for="inputLibelle" class="col-sm-2 control-label">Libelle </label>
+      
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputLibelle" placeholder="Libelle du profil " 
+                [(ngModel)]="profils.libelle" formControlName="libelle"
+                [ngClass]="{ 'is-invalid': submitted && f.libelle.errors }"
+                >
+
+                <div *ngIf="submitted && f.libelle.errors" class="invalid-feedback">
+                    <div  class="text-danger" *ngIf="f.libelle.errors.required">le libelle est obligatoire</div>
+                  </div>
+              </div>
+            </div>
+            <div class="box-footer">
+            
+                <button (click)="EditProfil()"  class="btn btn-info pull-right">Editer</button>
+                <button [routerLink]="['/home']"  class="btn btn-danger pull-left">Retour</button>
+                
+              </div>
+          
+          </div>
+          <!-- /.box-body -->
+          
+          <!-- /.box-footer -->
+        </form>
+      </div>
+        <!-- /.box  fin creation de profil  -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </div>
+    <!-- /.widget-user -->
+  </div>
+
+
+    </div>
+    </div>
